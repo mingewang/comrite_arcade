@@ -5,6 +5,7 @@ init(strip=not sys.stdout.isatty()) # strip colors if stdout is redirected
 from termcolor import cprint 
 from pyfiglet import figlet_format
 
+# https://www.codesnail.com/text-to-ascii-art-using-python/
 # use pyfiglet -l to get fonts
 cprint("hello world", 'blue', 'on_white')
 cprint(figlet_format('missile!', font='starwars'),
