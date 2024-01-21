@@ -10,7 +10,7 @@ class TicTacToe:
         print("-----------")
         print(f" {self.board[3]}(4) | {self.board[4]}(5) | {self.board[5]}(6) ")
         print("-----------")
-        print(f" {self.board[6]}(6) | {self.board[7]}(7) | {self.board[8]}(9) ")
+        print(f" {self.board[6]}(7) | {self.board[7]}(8) | {self.board[8]}(9) ")
 
     def make_move(self, position):
         """Make a move on the board."""
