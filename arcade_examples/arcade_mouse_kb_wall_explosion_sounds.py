@@ -73,6 +73,9 @@ class MyGame(arcade.Window):
 
         # Create our ball
         self.ball = Ball(50, 50, 0, 0, 15, arcade.color.AUBURN)
+        self.laser_sound = arcade.load_sound("laser.wav")
+        self.background_music = arcade.load_sound(":resources:music/1918.mp3")
+        arcade.play_sound(self.background_music, volume=0.5, looping=True)
 
     def on_draw(self):
         """ Called whenever we need to draw the window. """
@@ -92,6 +95,9 @@ class MyGame(arcade.Window):
             self.ball.change_y = MOVEMENT_SPEED
         elif key == arcade.key.DOWN:
             self.ball.change_y = -MOVEMENT_SPEED
+        elif key == arcade.key.SPACE:
+            arcade.play_sound(self.laser_sound)
+
 
     def on_key_release(self, key, modifiers):
         """ Called whenever a user releases a key. """
