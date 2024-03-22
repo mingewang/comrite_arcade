@@ -15,3 +15,8 @@ for item in list1:
         list2.append(item)
 
 print("even list is: ", list2)
+
+# method 2:
+
+list3 = [x for x in list1 if x%2 == 0 ]
+print("even list using comprehension :", list3)
