@@ -1,4 +1,5 @@
 import arcade
+import time
 
 
 class MyGame(arcade.Window):
@@ -20,11 +21,17 @@ class MyGame(arcade.Window):
         arcade.start_render()
 
         arcade.draw_circle_filled(self.ball_x, self.ball_y, 15, arcade.color.AUBURN)
+        # you will see this is also 1/60 second
+        print("on_draw time is: ", time.time() )
 
+    # better use on_update according to doc
+    # https://api.arcade.academy/en/latest/api/window.html?highlight=on_draw#arcade-window
     def update(self, delta_time):
         """ Called to update our objects. Happens approximately 60 times per second."""
         self.ball_x += 1
         self.ball_y += 1
+        # you will see this is 1/60 second
+        #print("time is: ", delta_time)
 
 
 def main():
