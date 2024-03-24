@@ -73,7 +73,8 @@ class MyGame(arcade.Window):
 
         # Create our ball
         self.ball = Ball(50, 50, 0, 0, 15, arcade.color.AUBURN)
-        self.laser_sound = arcade.load_sound("laser.wav")
+        #self.laser_sound = arcade.load_sound("laser.wav")
+        self.laser_sound = arcade.load_sound(":resources:sounds/laser3.wav")
         self.background_music = arcade.load_sound(":resources:music/1918.mp3")
         arcade.play_sound(self.background_music, volume=0.5, looping=True)
 
