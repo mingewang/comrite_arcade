@@ -42,6 +42,8 @@ class MyGame(arcade.Window):
         self.set_mouse_visible(False)
 
         arcade.set_background_color(arcade.color.AMAZON)
+        self.eating_sound = arcade.load_sound(":resources:sounds/explosion2.wav")
+     
 
     def setup(self):
         """ Set up the game and initialize the variables. """
@@ -105,6 +107,7 @@ class MyGame(arcade.Window):
         for coin in coins_hit_list:
             coin.remove_from_sprite_lists()
             self.score += 1
+            arcade.play_sound(self.eating_sound)
 
 
 def main():
