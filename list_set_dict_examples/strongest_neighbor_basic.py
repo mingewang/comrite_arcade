@@ -7,8 +7,8 @@ only compare right neighbor.
 Given an array arr[] of N positive integers. The task is to find the maximum for every adjacent pair in the array.
 Examples:
 
-Input: 1 2 2 3 4 5
-Output:2 3 4 5 5
+Input: 1 2 1 3 4 5
+Output:2 2 3 4 5
 
 '''
 def maximumAdjacent(arr1):
@@ -18,9 +18,6 @@ def maximumAdjacent(arr1):
     # value between adjacent pairs
     arr2 = []  
 
-    if n <= 1:
-        arr2 = arr1
-     
     # iterate from 0 to n - 1
     for i in range(0, n-1):
         # initial max as this element
@@ -33,7 +30,6 @@ def maximumAdjacent(arr1):
     return arr2
          
 if __name__ == "__main__" :
-   
   # input array
   arr1 = [1,2,2,3,4,5]
   result = maximumAdjacent(arr1)
