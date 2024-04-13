@@ -117,8 +117,10 @@ class MyGame(arcade.Window):
 
         # Select the (unscrolled) camera for our GUI
         self.camera_for_gui.use()
-        text = f"camera: ({self.camera_for_sprites.position[0]:5.1f}, " \
-               f"{self.camera_for_sprites.position[1]:5.1f})" \
+        text = f"GUI: ({self.camera_for_gui.position[0]:1.0f}," \
+               f"{self.camera_for_gui.position[1]:1.0f})" \
+               f"camera: ({self.camera_for_sprites.position[0]:4.0f}, " \
+               f"{self.camera_for_sprites.position[1]:4.0f})" \
                f"player: ({self.player_sprite.center_x}," \
                f"{self.player_sprite.center_y})" 
         arcade.draw_text(text, 10, 10, arcade.color.WHITE, 24)
