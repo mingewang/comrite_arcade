@@ -49,8 +49,8 @@ class MyGame(arcade.Window):
 
         # Create the player
         self.player_sprite = arcade.Sprite(":resources:images/animated_characters/male_adventurer/maleAdventurer_jump.png", SPRITE_SCALING_PLAYER)
-        self.player_sprite.center_x = 50
-        self.player_sprite.center_y = 64
+        self.player_sprite.center_x = 0
+        self.player_sprite.center_y = 0 
         self.player_list.append(self.player_sprite)
 
         # --- Manually place walls
@@ -117,7 +117,11 @@ class MyGame(arcade.Window):
 
         # Select the (unscrolled) camera for our GUI
         self.camera_for_gui.use()
-        arcade.draw_text(f"Score: {self.score}", 10, 10, arcade.color.WHITE, 24)
+        text = f"camera: ({self.camera_for_sprites.position[0]:5.1f}, " \
+               f"{self.camera_for_sprites.position[1]:5.1f})" \
+               f"player: ({self.player_sprite.center_x}," \
+               f"{self.player_sprite.center_y})" 
+        arcade.draw_text(text, 10, 10, arcade.color.WHITE, 24)
 
     def on_update(self, delta_time):
         """ Movement and game logic """
@@ -129,7 +133,6 @@ class MyGame(arcade.Window):
         # Scroll the screen to the player
         #self.scroll_to_player()
 
-        self.score += 1
         # Scroll the window to the player.
         #
         # If CAMERA_SPEED is 1, the camera will immediately move to the desired position.
