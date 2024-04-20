@@ -1,4 +1,10 @@
 import arcade
+import os
+
+# to run in normal python, need to cd to this script's dir for resources
+file_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(file_dir)
+
 
 SPRITE_SCALING = 0.5
 TILE_SCALING = 0.5
@@ -7,7 +13,7 @@ GRAVITY = 0.25
 
 DEFAULT_SCREEN_WIDTH = 800
 DEFAULT_SCREEN_HEIGHT = 600
-SCREEN_TITLE = "Sprite Move with Scrolling Screen Example"
+SCREEN_TITLE = "Sprite Move with Tiled Scrolling Screen Example"
 
 # How many pixels to keep as a minimum margin between the character
 # and the edge of the screen.
