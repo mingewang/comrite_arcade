@@ -29,12 +29,12 @@
                         {
                          "name":"boundary_left",
                          "type":"int",
-                         "value":100
+                         "value":300
                         }, 
                         {
                          "name":"boundary_right",
                          "type":"int",
-                         "value":300
+                         "value":500
                         }, 
                         {
                          "name":"change_x",
@@ -45,8 +45,36 @@
                  "type":"",
                  "visible":true,
                  "width":128,
-                 "x":622.893704850361,
-                 "y":872.421052631579
+                 "x":644.028895768834,
+                 "y":888.272445820433
+                }, 
+                {
+                 "gid":122,
+                 "height":128,
+                 "id":5,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"boundary_bottom",
+                         "type":"int",
+                         "value":300
+                        }, 
+                        {
+                         "name":"boundary_top",
+                         "type":"int",
+                         "value":500
+                        }, 
+                        {
+                         "name":"change_y",
+                         "type":"int",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":128,
+                 "x":363.987616099071,
+                 "y":233.081527347781
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -55,7 +83,7 @@
          "y":0
         }],
  "nextlayerid":3,
- "nextobjectid":5,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.2",
