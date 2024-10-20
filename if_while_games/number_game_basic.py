@@ -1,3 +1,10 @@
+
+import random
+
+
+random.randint(0, 100)
+
+
 random_number = 23
 print("Welcome to the Number Guessing Game!")
 print("Guess the number between 1 and 100. ")
