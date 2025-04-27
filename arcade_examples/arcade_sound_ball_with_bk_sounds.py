@@ -45,13 +45,15 @@ class MyGame(arcade.Window):
 
         # Create our ball
         self.ball = Ball(50, 50, 0, 0, 15, arcade.color.AUBURN)
-        self.laser_sound = arcade.load_sound("laser.wav")
-        self.background_music = arcade.load_sound("background_music.mp3")
+        #self.laser_sound = arcade.load_sound("laser.wav")
+        #self.background_music = arcade.load_sound("background_music.mp3")
+        self.laser_sound = arcade.load_sound(":resources:sounds/laser5.wav")
+        self.background_music = arcade.load_sound(":resources:music/funkyrobot.mp3")
         arcade.play_sound(self.background_music, volume=0.5, looping=True)
 
     def on_draw(self):
         """ Called whenever we need to draw the window. """
-        arcade.start_render()
+        self.clear() 
         self.ball.draw()
 
     def update(self, delta_time):
