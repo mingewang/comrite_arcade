@@ -45,11 +45,14 @@ class MyGame(arcade.Window):
 
         # Create our ball
         self.ball = Ball(50, 50, 0, 0, 15, arcade.color.AUBURN)
-        self.laser_sound = arcade.load_sound("laser.wav")
+        #self.laser_sound = arcade.load_sound("laser.wav")
+        #https://api.arcade.academy/en/2.6.17/resources.html
+        self.laser_sound = arcade.load_sound(":resources:sounds/laser3.wav")
 
     def on_draw(self):
         """ Called whenever we need to draw the window. """
-        arcade.start_render()
+        #arcade.start_render()
+        self.clear()
         self.ball.draw()
 
     def update(self, delta_time):
