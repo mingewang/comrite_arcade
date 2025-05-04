@@ -8,13 +8,18 @@ class MyGame(arcade.Window):
     super().__init__(width, height, title)
     # Set the background color
     arcade.set_background_color(arcade.color.ASH_GREY)
+    self.ball_x = 50
+    self.ball_y = 100
 
   def on_draw(self):
     """ Called whenever we need to draw the window. """
-    #arcade.start_render()
     self.clear()
-    arcade.draw_circle_filled(50, 50, 15, arcade.color.AUBURN)
+    arcade.draw_circle_filled(self.ball_x, self.ball_y, 15, arcade.color.AUBURN)
     arcade.draw_text("Hello, world!", 300, 300, arcade.color.WHITE, font_size=20, anchor_x="center")
+
+  def update(self, delta_time):
+    self.ball_x += 2 
+    self.ball_y += 2 
               
 
 def main():
